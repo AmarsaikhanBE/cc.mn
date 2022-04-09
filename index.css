@@ -111,13 +111,15 @@ header {
 .sms-box h1 {
     color: #e5001e;
     font-size: 4rem;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
     text-shadow: 1px 1px 5px #e5001e;
 }
 
 #headImg {
+    display: block;
     width: 80%;
     transform: translateY(-20%);
+    margin: auto;
 }
 
 

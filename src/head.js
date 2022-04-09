@@ -1,10 +1,21 @@
-const headerText = ['Ажлын зар авахад илүү хялбар боллоо.', 'Та зараа ганц мессэж бичээд аваарай.', 'Ажил хайхад интернет хэрэггүй.', 'Хариуг тэр дор нь', 'Монголын анхны нэгдсэн ажлын зарын платформ г.м', 'Хамгийн олон ажлын байрны зарыг нэг дороос']
-const printSMS = () => {
-    setInterval(function() {
-        headerText.forEach(element => {
-            smsTxt.textContent = element
-        }, 1000)
-    });
-    setInterval(printSMS, 7000)
+const headerText = ['Ажлын зар авахад илүү хялбар боллоо.', 'Та зараа ганц мессэж бичээд аваарай.', 'Ажил хайхад интернет хэрэггүй.', 'Хариуг тэр дор нь.', 'Монголын анхны нэгдсэн ажлын зарын платформ.', 'Хамгийн олон ажлын байрны зарыг нэг дороос.']
+let index = 0
+let i = 0
+const write = () => {
+    const text = headerText[index]
+    const txt = text.split('')
+    if (i == txt.length) {
+        i = 0
+        smsTxt.textContent = ''
+        index++
+        setTimeout(write, 500)
+        if (index == headerText.length) {
+            index = 0
+        }
+    } else {
+        smsTxt.textContent += txt[i]
+        i++
+        setTimeout(write, 100)
+    }
 }
-printSMS()
+write()
