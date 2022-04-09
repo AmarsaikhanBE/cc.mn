@@ -8,10 +8,10 @@ const write = () => {
         i = 0
         smsTxt.textContent = ''
         index++
-        setTimeout(write, 500)
         if (index == headerText.length) {
             index = 0
         }
+        setTimeout(write, 100)
     } else {
         smsTxt.textContent += txt[i]
         i++
