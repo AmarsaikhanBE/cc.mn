@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карьер центр - Хөдөлмөр зуучлалын бирж</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/70ba6e6850.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="container menu-container">
+            <img src="img/logo.png" alt="logo" id="navLogo">
+            <ul class="menu">
+                <li>Ажлын байр</li>
+                <li>Компани</li>
+                <li id="loginBtn">Нэвтрэх</li>
+                <li>Тусламж, зөвлөгөө</li>
+            </ul>
+        </div>
+        <!-- Login Section -->
+        <div id="loginPage">
+            <ul class="user-buttons">
+                <li id="toPerson" class="active">Ажил хайгч</li>
+                <li id="toCompany">Ажил олгогч</li>
+                <li id="closeLogin">X</li>
+            </ul>
+            <div id="personPage">
+                <h1>Ажил хайгч</h1>
+                <form id="perLoginBox">
+                    <label for="login-name">Хэрэглэгчийн утасны дугаар:</label>
+                    <input type="text" name="login-name" id="loginName" placeholder="Утасны дугаар">
+                    <label for="login-password">Нууц үг:</label>
+                    <input type="text" name="login-password" id="loginPassword" placeholder="Нууц үг">
+                    <button id="loginButton">Нэвтрэх</button>
+                </form>
+                <form id="perSignupBox">
+                    <label for="person-name">Хэрэглэгчийн нэр:</label>
+                    <input type="text" name="person-name" id="personName" placeholder="Овог нэр">
+                    <label for="person-phone">Утасны дугаар:</label>
+                    <input type="text" name="person-phone" id="personPhone" placeholder="Утасны дугаар">
+                    <label for="person-password">Нууц үг:</label>
+                    <input type="text" name="person-password" id="personPassword" placeholder="Нууц үг">
+                    <label for="person-password-confirm">Нууц үг давтах:</label>
+                    <input type="text" name="person-password-confirm" id="personPasswordConfirm" placeholder="Нууц үг">
+                    <button id="signupButton">Бүртгүүлэх</button>
+                </form>
+                <form id="perPassForgetBox">
+                    <label for="registerd-phone">Бүртгэлтэй утасны дугаар:</label>
+                    <input type="text" name="registerd-phone" id="registerdPhone" placeholder="Утасны дугаар">
+                    <button id="sendPassResetCode">Нууц үг сэргээх код илгээх</button>
+                </form>
+                <ul class="login-buttons">
+                    <li id="callPerLoginBox">Нэврэх</li>
+                    <li id="callPerSignupBox">Бүртгүүлэх</li>
+                    <li id="callPerPassForgetBox">Нууц үг мартсан уу?</li>
+                </ul>
+            </div>
+            <div id="companyPage">
+                <h1>Ажил олгогч</h1>
+                <form id="coLoginBox">
+                    <label for="login-name">Хэрэглэгчийн утасны дугаар:</label>
+                    <input type="text" name="login-name" id="coLoginName" placeholder="Утасны дугаар">
+                    <label for="login-password">Нууц үг:</label>
+                    <input type="text" name="login-password" id="coLoginPassword" placeholder="Нууц үг">
+                    <button id="coLoginButton">Нэвтрэх</button>
+                </form>
+                <form id="coSignupBox">
+                    <label for="company-name">Хэрэглэгчийн нэр:</label>
+                    <input type="text" name="company-name" id="companyName" placeholder="Компаний нэр">
+                    <label for="coson-phone">Утасны дугаар:</label>
+                    <input type="text" name="coson-phone" id="companyPhone" placeholder="Утасны дугаар">
+                    <label for="coson-password">Нууц үг:</label>
+                    <input type="text" name="coson-password" id="companyPassword" placeholder="Нууц үг">
+                    <label for="co-password-confirm">Нууц үг давтах:</label>
+                    <input type="text" name="co-password-confirm" id="companyPasswordConfirm" placeholder="Нууц үг">
+                    <button id="coSignupButton">Бүртгүүлэх</button>
+                </form>
+                <form id="coPassForgetBox">
+                    <label for="registerd-phone">Бүртгэлтэй утасны дугаар:</label>
+                    <input type="text" name="registerd-phone" id="coRegisterdPhone" placeholder="Утасны дугаар">
+                    <button id="coSendPassResetCode">Нууц үг сэргээх код илгээх</button>
+                </form>
+                <ul class="login-buttons">
+                    <li id="callCoLoginBox">Нэврэх</li>
+                    <li id="callCoSignupBox">Бүртгүүлэх</li>
+                    <li id="callCoPassForgetBox">Нууц үг мартсан уу?</li>
+                </ul>
+            </div>
+            <script src="src/login.js"></script>
+        </div>
+    </nav>
+    <!-- Header Support -->
+    <header>
+        <div class="header container">
+            <div class="sms-box">
+                <h2 id="smsTxt"></h2>
+                <h1><i class="fa-solid fa-envelope"></i> 151717</h1>
+            </div>
+            <div class="head-img">
+                <img src="img/head-img.png" id="headImg" alt="head-img">
+            </div>
+        </div>
+        <script src="src/head.js"></script>
+    </header>
+    <!-- Search -->
+    <div class="container search-box">
+        <section class="search">
+            <h2 style="margin-bottom: 2rem;">Ажлын байр хайх</h2>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="job_search" id="jobSearch">
+                <button id="searchButton">Ажил хайх</button>
+            </div>
+            <!-- Search Tool -->
+            <ul class="search-tool">
+                <li>
+                    <input type="button" id="categoryButton" value="Салбар">
+                    <select id="jobCategory" class="drop-down-list hidden">
+                        <option value="constructionBuilding">Барилга</option>
+                        <option value="mining">Уул уурхай</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="button" id="typeButton" value="Төрөл">
+                    <select id="jobType" class="drop-down-list hidden">
+                        <option value="fullTime">Бүтэн цаг</option>
+                        <option value="partTime">Хагас цаг</option>
+                        <option value="timeCount">Цагийн</option>
+                        <option value="seasonal">Цагийн</option>
+                        <option value="temporary">Түр ажлын байр</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="button" id="salaryButton" value="Цалин">
+                    <div id="jobSalary" class="drop-down-list hidden">
+                        <input type="range" name="salary_range" id="salaryRange" min="400000" max="4000000">
+                        <p><span id="salaryValue">400000</span>₮</p>
+                    </div>
+                </li>
+                <li>
+                    <input type="button" id="locationButton" value="Байршил">
+                    <select id="jobLocation" class="drop-down-list hidden">
+                        <option>Улаанбаатар</option>
+                        <option>Дархан</option>
+                        <option>Эрдэнэт</option>
+                    </select>
+                </li>
+                <li>
+                    <button id="clearButton">Цэвэрлэх</button>
+                </li>
+            </ul>
+            <script src="src/search.js"></script>
+        </section>
+    </div>
+    <!-- Main Section -->
+    <main>
+        <div class="container">
+            <div class="item-menu">
+                <div id="latestItems">
+                    <h3>Шинэ ажлын байр</h3>
+                    <div class="list-items">
+                        <div class="item">
+                            <div class="logo-box">
+                                <img src="img/logo.png" alt="company_logo">
+                            </div>
+                            <div class="item-text">
+                                <h4>Зарын утга</h4>
+                                <h5>Компанийн нэр</h5>
+                                <p>Цалин</p>
+                                <p class="red">7 хоног үлдлээ</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-box">
+                                <img src="img/logo.png" alt="company_logo">
+                            </div>
+                            <div class="item-text">
+                                <h4>Зарын утга</h4>
+                                <h5>Компанийн нэр</h5>
+                                <p>Цалин</p>
+                                <p class="red">7 хоног үлдлээ</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-box">
+                                <img src="img/logo.png" alt="company_logo">
+                            </div>
+                            <div class="item-text">
+                                <h4>Зарын утга</h4>
+                                <h5>Компанийн нэр</h5>
+                                <p>Цалин</p>
+                                <p class="red">7 хоног үлдлээ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="mostViewedItems">
+                    <h3>Эрэлттэй ажлын байр</h3>
+                    <div class="list-items">
+                        <div class="item">
+                            <div class="logo-box">
+                                <img src="img/logo.png" alt="company_logo">
+                            </div>
+                            <div class="item-text">
+                                <h4>Зарын утга</h4>
+                                <h5>Компанийн нэр</h5>
+                                <p>Цалин</p>
+                                <p class="red">7 хоног үлдлээ</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-box">
+                                <img src="img/logo.png" alt="company_logo">
+                            </div>
+                            <div class="item-text">
+                                <h4>Зарын утга</h4>
+                                <h5>Компанийн нэр</h5>
+                                <p>Цалин</p>
+                                <p class="red">7 хоног үлдлээ</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-box">
+                                <img src="img/logo.png" alt="company_logo">
+                            </div>
+                            <div class="item-text">
+                                <h4>Зарын утга</h4>
+                                <h5>Компанийн нэр</h5>
+                                <p>Цалин</p>
+                                <p class="red">7 хоног үлдлээ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="topSalaryItems">
+                    <h3>Өндөр цалин ажлын байр</h3>
+                    <div class="list-items">
+                        <div class="item">
+                            <div class="logo-box">
+                                <img src="img/logo.png" alt="company_logo">
+                            </div>
+                            <div class="item-text">
+                                <h4>Зарын утга</h4>
+                                <h5>Компанийн нэр</h5>
+                                <p>Цалин</p>
+                                <p class="red">7 хоног үлдлээ</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-box">
+                                <img src="img/logo.png" alt="company_logo">
+                            </div>
+                            <div class="item-text">
+                                <h4>Зарын утга</h4>
+                                <h5>Компанийн нэр</h5>
+                                <p>Цалин</p>
+                                <p class="red">7 хоног үлдлээ</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="logo-box">
+                                <img src="img/logo.png" alt="company_logo">
+                            </div>
+                            <div class="item-text">
+                                <h4>Зарын утга</h4>
+                                <h5>Компанийн нэр</h5>
+                                <p>Цалин</p>
+                                <p class="red">7 хоног үлдлээ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fullItemShower" class="hidden">
+                    <div class="company">
+                        <div class="logo-box">
+                            <img src="img/logo.png" alt="company_logo">
+                        </div>
+                        <div class="company-name">
+                            <h2>Компанийн нэр</h2>
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <span class="followers">345</span>
+                            <button class="follow-button">Дагах</button>
+                        </div>
+                    </div>
+                    <div class="item-body">
+                        <h1>Зарын утга</h1>
+                        <p class="red">7 хоног үлдлээ</p>
+                        <h3>Үндсэн үүрэг, хариуцлага</h3>
+                        <ul>
+                            <li>Гаалийн баримт бичиг боловсруулах</li>
+                            <li>Ачаа бараа ангилжь баглах</li>
+                            <li>Дотоод худалдан авалт хийх</li>
+                            <li>Агуулахын бараа материал тооллого хийх</li>
+                            <li>Ажлын байрны тодорхойлолтод заагдсан үүргүүдийг гүйцэтгэх</li>
+                        </ul>
+                        <h3>Цалин</h3>
+                        <p>1.600.000₮ - 1.700.000₮</p>
+                        <h3>Ажлын байрны төрөл</h3>
+                        <p>Бүтэн цагийн</p>
+                        <h3>Ур чадвар, давуу тал</h3>
+                        <ul>
+                            <li>Хувьдаа машинтай байх</li>
+                            <li>Техникийн болон барилгын мэдлэгтэй байх</li>
+                            <li>Багаар ажиллах чадвар</li>
+                            <li>Компьютерийн хэрэглээний програм дээр ажиллах чадвартай</li>
+                            <li>Хариуцлагатай, үнэнч шударга</li>
+                        </ul>
+                        <p>Тээврийн менежмент эсвэл Гаалийн менежмент чиглэлээр Бакалавр зэрэгтэй</p>
+                    </div>
+                    <button id="sendCV">CV Илгээх</button>
+                    <button id="closeView">Х</button>
+                </div>
+            </div>
+        </div>
+        <script src="src/main.js"></script>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <!-- Contact -->
+        <section class="contact">
+            <div class="container">
+                <h1>Бидэндтэй холбогдох</h1>
+                <ul class="contact-links">
+                    <li class="contact-item">
+                        <i class="fa-solid fa-earth-asia"></i>
+                        <div>
+                            <h6>Хяаг:</h6>
+                            <p>Улаанбаатар хот, Чингэлтэй дүүрэг, 5-р хороо, MN Tower 1504 тоот</p>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h6>Утас:</h6>
+                            <p>7772-4777</p>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <div>
+                            <h6>SMS:</h6>
+                            <p>151717</p>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h6>Имэйл:</h6>
+                            <p>info@careercenter.mn`</p>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fa-solid fa-power-off"></i>
+                        <div>
+                            <h6>Ажиллах цаг:</h6>
+                            <p>09:00 - 18:00</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Main footer -->
+        <section class="foot">
+            <div class="container flex">
+                <img src="img/logo-foot.png" alt="logo">
+                <p>Зохиогчийн эрхийн хуулийн дагуу хамгаалагдсан</p>
+                <div class="social-buttons">
+                    <i></i><i></i><i></i>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
