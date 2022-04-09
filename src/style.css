@@ -50,7 +50,6 @@ nav {
 
 #navLogo {
     width: 10rem;
-    cursor: pointer;
 }
 
 
@@ -78,8 +77,14 @@ nav {
     margin-left: 0;
 }
 
-.menu li:hover,
-.menu li.active {
+.menu a {
+    text-decoration: none;
+    color: #212121;
+}
+
+.menu a:hover,
+.menu a.active,
+#loginBtn:hover {
     color: #e5001e;
 }
 
@@ -99,8 +104,28 @@ header {
     grid-template-columns: repeat(2, 50%);
 }
 
+.header>div {
+    padding: 0 1rem;
+}
+
 .sms-box {
-    margin-top: 5rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.sms-box>svg>path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: draw 2s forwards infinite;
+}
+
+@keyframes draw {
+    form {
+        stroke-dashoffset: 1;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 .sms-box h2 {
@@ -109,10 +134,12 @@ header {
 }
 
 .sms-box h1 {
+    position: absolute;
     color: #e5001e;
     font-size: 4rem;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 5px #e5001e;
+    /* text-shadow: 1px 1px 5px #e5001e; */
+    top: 2rem;
+    left: 4rem;
 }
 
 #headImg {

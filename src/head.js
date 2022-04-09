@@ -5,13 +5,15 @@ const write = () => {
     const text = headerText[index]
     const txt = text.split('')
     if (i == txt.length) {
-        i = 0
-        smsTxt.textContent = ''
-        index++
-        if (index == headerText.length) {
-            index = 0
-        }
-        setTimeout(write, 100)
+        setTimeout(() => {
+            i = 0
+            index++
+            if (index == headerText.length) {
+                index = 0
+            }
+            smsTxt.textContent = ''
+            setTimeout(write, 100)
+        }, 1000)
     } else {
         smsTxt.textContent += txt[i]
         i++

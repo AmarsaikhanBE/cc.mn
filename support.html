@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карьер центр - Хөдөлмөр зуучлалын бирж</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://kit.fontawesome.com/70ba6e6850.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="container menu-container">
+            <a href="index.html"><img src="img/logo.png" alt="logo" id="navLogo"></a>
+            <ul class="menu">
+                <li><a href="index.html">Ажлын байр</a></li>
+                <li><a href="company.html">Компани</a></li>
+                <li id="loginBtn">Нэвтрэх</li>
+                <li><a href="support.html" class="active">Тусламж, зөвлөгөө</a></li>
+            </ul>
+        </div>
+        <!-- Login Section -->
+        <div id="loginPage">
+            <ul class="user-buttons">
+                <li id="toPerson" class="active">Ажил хайгч</li>
+                <li id="toCompany">Ажил олгогч</li>
+                <li id="closeLogin">X</li>
+            </ul>
+            <div id="personPage">
+                <h1>Ажил хайгч</h1>
+                <form id="perLoginBox">
+                    <label for="login-name">Хэрэглэгчийн утасны дугаар:</label>
+                    <input type="text" name="login-name" id="loginName" placeholder="Утасны дугаар">
+                    <label for="login-password">Нууц үг:</label>
+                    <input type="text" name="login-password" id="loginPassword" placeholder="Нууц үг">
+                    <button id="loginButton">Нэвтрэх</button>
+                </form>
+                <form id="perSignupBox">
+                    <label for="person-name">Хэрэглэгчийн нэр:</label>
+                    <input type="text" name="person-name" id="personName" placeholder="Овог нэр">
+                    <label for="person-phone">Утасны дугаар:</label>
+                    <input type="text" name="person-phone" id="personPhone" placeholder="Утасны дугаар">
+                    <label for="person-password">Нууц үг:</label>
+                    <input type="text" name="person-password" id="personPassword" placeholder="Нууц үг">
+                    <label for="person-password-confirm">Нууц үг давтах:</label>
+                    <input type="text" name="person-password-confirm" id="personPasswordConfirm" placeholder="Нууц үг">
+                    <button id="signupButton">Бүртгүүлэх</button>
+                </form>
+                <form id="perPassForgetBox">
+                    <label for="registerd-phone">Бүртгэлтэй утасны дугаар:</label>
+                    <input type="text" name="registerd-phone" id="registerdPhone" placeholder="Утасны дугаар">
+                    <button id="sendPassResetCode">Нууц үг сэргээх код илгээх</button>
+                </form>
+                <ul class="login-buttons">
+                    <li id="callPerLoginBox">Нэврэх</li>
+                    <li id="callPerSignupBox">Бүртгүүлэх</li>
+                    <li id="callPerPassForgetBox">Нууц үг мартсан уу?</li>
+                </ul>
+            </div>
+            <div id="companyPage">
+                <h1>Ажил олгогч</h1>
+                <form id="coLoginBox">
+                    <label for="login-name">Хэрэглэгчийн утасны дугаар:</label>
+                    <input type="text" name="login-name" id="coLoginName" placeholder="Утасны дугаар">
+                    <label for="login-password">Нууц үг:</label>
+                    <input type="text" name="login-password" id="coLoginPassword" placeholder="Нууц үг">
+                    <button id="coLoginButton">Нэвтрэх</button>
+                </form>
+                <form id="coSignupBox">
+                    <label for="company-name">Хэрэглэгчийн нэр:</label>
+                    <input type="text" name="company-name" id="companyName" placeholder="Компаний нэр">
+                    <label for="coson-phone">Утасны дугаар:</label>
+                    <input type="text" name="coson-phone" id="companyPhone" placeholder="Утасны дугаар">
+                    <label for="coson-password">Нууц үг:</label>
+                    <input type="text" name="coson-password" id="companyPassword" placeholder="Нууц үг">
+                    <label for="co-password-confirm">Нууц үг давтах:</label>
+                    <input type="text" name="co-password-confirm" id="companyPasswordConfirm" placeholder="Нууц үг">
+                    <button id="coSignupButton">Бүртгүүлэх</button>
+                </form>
+                <form id="coPassForgetBox">
+                    <label for="registerd-phone">Бүртгэлтэй утасны дугаар:</label>
+                    <input type="text" name="registerd-phone" id="coRegisterdPhone" placeholder="Утасны дугаар">
+                    <button id="coSendPassResetCode">Нууц үг сэргээх код илгээх</button>
+                </form>
+                <ul class="login-buttons">
+                    <li id="callCoLoginBox">Нэврэх</li>
+                    <li id="callCoSignupBox">Бүртгүүлэх</li>
+                    <li id="callCoPassForgetBox">Нууц үг мартсан уу?</li>
+                </ul>
+            </div>
+            <script src="src/login.js"></script>
+        </div>
+    </nav>
+    <!-- Footer -->
+    <footer>
+        <!-- Contact -->
+        <section class="contact">
+            <div class="container">
+                <h1>Бидэндтэй холбогдох</h1>
+                <ul class="contact-links">
+                    <li class="contact-item">
+                        <i class="fa-solid fa-earth-asia"></i>
+                        <div>
+                            <h6>Хяаг:</h6>
+                            <p>Улаанбаатар хот, Чингэлтэй дүүрэг, 5-р хороо, MN Tower 1504 тоот</p>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h6>Утас:</h6>
+                            <p>7772-4777</p>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <div>
+                            <h6>SMS:</h6>
+                            <p>151717</p>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h6>Имэйл:</h6>
+                            <p>info@careercenter.mn`</p>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fa-solid fa-power-off"></i>
+                        <div>
+                            <h6>Ажиллах цаг:</h6>
+                            <p>09:00 - 18:00</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Main footer -->
+        <section class="foot">
+            <div class="container flex">
+                <img src="img/logo-foot.png" alt="logo">
+                <p>Зохиогчийн эрхийн хуулийн дагуу хамгаалагдсан</p>
+                <div class="social-buttons">
+                    <i></i><i></i><i></i>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
